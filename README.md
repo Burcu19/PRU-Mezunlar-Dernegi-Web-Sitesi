@@ -1,1 +1,1 @@
-# PRU-Mezunlar-Derne-i-Web-Sitesi
+# PRU-Mezunlar-Dernegi-Web-Sitesi
