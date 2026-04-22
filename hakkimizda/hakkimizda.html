@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PRUMED - Hakkımızda</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed": "#ffdf96",
+                        "on-error": "#690005",
+                        "secondary-fixed": "#5ffbd6",
+                        "primary-container": "#221800",
+                        "on-background": "#d6e3ff",
+                        "on-primary-fixed": "#251a00",
+                        "outline": "#8f9097",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed": "#2b1701",
+                        "surface-container": "#112036",
+                        "inverse-surface": "#d6e3ff",
+                        "outline-variant": "#44474d",
+                        "surface-dim": "#041329",
+                        "tertiary-fixed": "#ffdcbd",
+                        "on-secondary-fixed": "#002019",
+                        "on-tertiary": "#432b10",
+                        "secondary": "#41e4c0",
+                        "on-tertiary-fixed-variant": "#5d4124",
+                        "on-secondary-fixed-variant": "#005142",
+                        "on-primary-fixed-variant": "#594400",
+                        "on-secondary": "#00382d",
+                        "surface-container-low": "#0d1c32",
+                        "on-secondary-container": "#004d3f",
+                        "on-tertiary-container": "#9d7b5a",
+                        "surface-container-high": "#1c2a41",
+                        "surface-variant": "#27354c",
+                        "surface-bright": "#2c3951",
+                        "error-container": "#93000a",
+                        "surface-container-lowest": "#010e24",
+                        "secondary-fixed-dim": "#38debb",
+                        "tertiary-fixed-dim": "#e7bf99",
+                        "secondary-container": "#00c7a5",
+                        "tertiary": "#e7bf99",
+                        "surface-tint": "#edc14f",
+                        "surface-container-highest": "#27354c",
+                        "on-primary-container": "#a17d04",
+                        "primary": "#edc14f",
+                        "on-surface-variant": "#c5c6cd",
+                        "on-primary": "#3e2e00",
+                        "tertiary-container": "#281400",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#edc14f",
+                        "inverse-on-surface": "#233148",
+                        "surface": "#041329",
+                        "inverse-primary": "#765a00",
+                        "on-surface": "#d6e3ff",
+                        "background": "#041329"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Plus Jakarta Sans", "sans-serif"],
+                        "label": ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Soft ambient shadow utility */
+        .ambient-shadow {
+            box-shadow: 0 0 64px rgba(4, 19, 41, 0.8);
+        }
+
+        .text-gradient-primary {
+            background: linear-gradient(to right, #edc14f, #ffdf96);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background text-on-surface font-body antialiased min-h-screen flex flex-col relative overflow-x-hidden selection:bg-primary/30 selection:text-primary">
+    <!-- Ambient Background Elements -->
+    <div class="fixed inset-0 pointer-events-none z-[-1]">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/5 blur-[120px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-secondary/5 blur-[150px]"></div>
+    </div>
+    <!-- Shared Navbar -->
+    <div id="navbar-container"></div>
+    <script src="../components/navbar.js"></script>
+    <!-- Main Content -->
+    <main class="flex-grow pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto w-full flex flex-col gap-24">
+        <!-- Hero Section -->
+        <header class="flex flex-col items-start max-w-4xl gap-6 relative">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low border border-outline-variant/10">
+                <span class="material-symbols-outlined text-secondary text-sm"
+                    style="font-variation-settings: 'FILL' 1;">explore</span>
+                <span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Pruva Neta</span>
+            </div>
+            <h1
+                class="font-headline text-5xl md:text-7xl font-extrabold tracking-[-0.02em] leading-tight text-on-surface">
+                Ortak Bir Miras,<br />
+                <span class="text-gradient-primary">Sonsuz Bir Ufuk.</span>
+            </h1>
+            <p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed mt-4">
+                Piri Reis Üniversitesi Mezunlar Derneği olarak, denizcilik disiplinini ve kardeşliğini dijital çağın
+                dinamikleriyle harmanlıyor; mezunlarımız için prestijli ve güvenli bir liman inşa ediyoruz.
+            </p>
+        </header>
+        <!-- Vizyon & Misyon (Bento Grid) -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-6 relative">
+            <!-- Decorative line -->
+            <div
+                class="hidden md:block absolute top-1/2 left-[-2rem] w-1 h-24 bg-gradient-to-b from-primary to-transparent rounded-full -translate-y-1/2 opacity-50">
+            </div>
+            <!-- Vision Card -->
+            <div
+                class="md:col-span-7 bg-surface-container-low/60 backdrop-blur-[20px] rounded-[1.5rem] p-10 flex flex-col justify-between ambient-shadow border border-outline-variant/5 group hover:bg-surface-container-highest transition-colors duration-500 ease-in-out relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full pointer-events-none transition-transform group-hover:scale-110">
+                </div>
+                <div class="mb-8">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-primary text-2xl"
+                            style="font-variation-settings: 'FILL' 1;">visibility</span>
+                    </div>
+                    <h2 class="font-headline text-3xl font-bold text-on-surface mb-4">Vizyonumuz</h2>
+                    <p class="font-body text-on-surface-variant leading-relaxed text-lg">
+                        Denizcilik sektöründe ve küresel iş dünyasında, Piri Reis Üniversitesi mezunlarının gücünü ve
+                        kalitesini temsil eden öncü, yenilikçi ve sarsılmaz bir köprü olmak.
+                    </p>
+                </div>
+            </div>
+            <!-- Mission Card -->
+            <div
+                class="md:col-span-5 bg-surface-container-lowest/80 rounded-[1.5rem] p-10 flex flex-col justify-between border border-outline-variant/5 relative overflow-hidden">
+                <div
+                    class="absolute bottom-0 right-0 w-full h-1/2 bg-gradient-to-t from-surface-container/50 to-transparent pointer-events-none">
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="material-symbols-outlined text-secondary"
+                            style="font-variation-settings: 'FILL' 1;">anchor</span>
+                        <h2 class="font-headline text-2xl font-bold text-on-surface">Misyonumuz</h2>
+                    </div>
+                    <ul class="space-y-4 font-body text-on-surface-variant">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary/70 text-sm mt-1">navigation</span>
+                            <span>Mezunlar arası dayanışmayı ve profesyonel ağı güçlendirmek.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary/70 text-sm mt-1">navigation</span>
+                            <span>Sektörel tecrübeyi yeni nesillere mentorluk ile aktarmak.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary/70 text-sm mt-1">navigation</span>
+                            <span>Üniversitemizin mirasını ulusal ve uluslararası arenada yüceltmek.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Yönetim Kurulu -->
+        <section class="flex flex-col gap-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div>
+                    <h2 class="font-headline text-4xl font-bold text-on-surface tracking-tight mb-2">Yönetim Kurulu</h2>
+                    <p class="font-body text-on-surface-variant">Derneğimizin rotasını belirleyen kaptanlar.</p>
+                </div>
+                <div
+                    class="h-[1px] flex-grow bg-gradient-to-r from-outline-variant/20 via-outline-variant/5 to-transparent mx-8 hidden md:block">
+                </div>
+            </div>
+            <!-- TODO: Backend entegrasyonu yapılacak. Yönetim kurulu üyeleri API'den çekilecek ve dinamik olarak render edilecek. -->
+            <!-- Her kart için gerekli veriler: ad-syad, unvan ve şirket, fotoğraf URL'si -->
+            <!-- iyi çalışmalar. SALİH BİRDAL -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="board-members-grid">
+            </div>
+        </section>
+    </main>
+    <!-- Footer (From Shared Components) -->
+    <footer
+        class="bg-[#041329] dark:bg-[#041329] w-full py-16 tonal-shift via surface-container-low flat no-shadows mt-auto relative z-10">
+        <div class="absolute top-0 left-0 w-full h-[1px] bg-white/5"></div>
+        <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-8">
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <span class="text-lg font-bold text-[#edc14f]">PRUMED</span>
+                <p
+                    class="text-[#edc14f] dark:text-[#edc14f] font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest opacity-80">
+                    © 2024 Piri Reis Üniversitesi Mezunlar Derneği. Pruva Neta.
+                </p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-slate-500 hover:text-[#edc14f] transition-colors opacity-80 hover:opacity-100"
+                    href="#">KVKK Aydınlatma Metni</a>
+                <a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-slate-500 hover:text-[#edc14f] transition-colors opacity-80 hover:opacity-100"
+                    href="#">Kullanım Koşulları</a>
+                <a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-slate-500 hover:text-[#edc14f] transition-colors opacity-80 hover:opacity-100"
+                    href="#">İletişim</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

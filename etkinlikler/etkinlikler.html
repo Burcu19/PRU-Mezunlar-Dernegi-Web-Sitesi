@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PRUMED - Etkinlikler</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#ffdf96",
+                        "on-error": "#690005",
+                        "secondary-fixed": "#5ffbd6",
+                        "primary-container": "#221800",
+                        "on-background": "#d6e3ff",
+                        "on-primary-fixed": "#251a00",
+                        "outline": "#8f9097",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed": "#2b1701",
+                        "surface-container": "#112036",
+                        "inverse-surface": "#d6e3ff",
+                        "outline-variant": "#44474d",
+                        "surface-dim": "#041329",
+                        "tertiary-fixed": "#ffdcbd",
+                        "on-secondary-fixed": "#002019",
+                        "on-tertiary": "#432b10",
+                        "secondary": "#41e4c0",
+                        "on-tertiary-fixed-variant": "#5d4124",
+                        "on-secondary-fixed-variant": "#005142",
+                        "on-primary-fixed-variant": "#594400",
+                        "on-secondary": "#00382d",
+                        "surface-container-low": "#0d1c32",
+                        "on-secondary-container": "#004d3f",
+                        "on-tertiary-container": "#9d7b5a",
+                        "surface-container-high": "#1c2a41",
+                        "surface-variant": "#27354c",
+                        "surface-bright": "#2c3951",
+                        "error-container": "#93000a",
+                        "surface-container-lowest": "#010e24",
+                        "secondary-fixed-dim": "#38debb",
+                        "tertiary-fixed-dim": "#e7bf99",
+                        "secondary-container": "#00c7a5",
+                        "tertiary": "#e7bf99",
+                        "surface-tint": "#edc14f",
+                        "surface-container-highest": "#27354c",
+                        "on-primary-container": "#a17d04",
+                        "primary": "#edc14f",
+                        "on-surface-variant": "#c5c6cd",
+                        "on-primary": "#3e2e00",
+                        "tertiary-container": "#281400",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#edc14f",
+                        "inverse-on-surface": "#233148",
+                        "surface": "#041329",
+                        "inverse-primary": "#765a00",
+                        "on-surface": "#d6e3ff",
+                        "background": "#041329"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Plus Jakarta Sans", "sans-serif"],
+                        "label": ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Nautical sea-swell transition */
+        .sea-swell {
+            transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+    </style>
+</head>
+<!-- TODO: Etkinlik divlerin oluşturulması, backend ve LCV entegrasyonu gerekiyor. iyi çalışmalar. SALİH BİRDAL -->
+
+<body
+    class="bg-surface text-on-surface font-body antialiased min-h-screen flex flex-col selection:bg-primary selection:text-on-primary">
+    <!-- Shared Navbar -->
+    <div id="navbar-container"></div>
+    <script src="../components/navbar.js"></script>
+    <!-- Main Canvas -->
+    <main class="flex-grow pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto w-full">
+        <!-- Header Section -->
+        <header class="mb-16 max-w-3xl">
+            <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-primary tracking-tighter mb-6">
+                Açık Denizlerde<br /><span class="text-on-surface">Buluşma Noktası.</span>
+            </h1>
+            <p class="font-body text-lg md:text-xl text-on-surface-variant leading-relaxed">
+                PRUMED güvertesinde gerçekleşecek özel buluşmalar, networking etkinlikleri ve geleneksel bir araya
+                gelişler. Ajandanızı hazırlayın.
+            </p>
+        </header>
+        <!-- Bento Grid Events -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(300px,_auto)]">
+            <!-- Featured Event Card (Spans 2 columns) -->
+            <article
+                class="md:col-span-2 relative group rounded-2xl overflow-hidden bg-surface-container-low shadow-[0_8px_32px_rgba(0,0,0,0.4)] sea-swell hover:-translate-y-1 hover:bg-surface-container-highest cursor-pointer">
+                <!-- Background Image -->
+                <div class="absolute inset-0 z-0">
+                    <img alt="Pru's Thursday Networking Event"
+                        class="w-full h-full object-cover opacity-40 group-hover:opacity-50 transition-opacity duration-700"
+                        data-alt="elegant evening networking event at an upscale bar with warm amber lighting and professionals talking with drinks in hand blurred background"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdNgw2LtEI2sWikXoNPXj7z915rf1O8BjHcaOQ1hw-x7ayy88imqFbjpX1zR4NuimABU5wBV0uoZRxB2MdgJEAmRVHBy3JUZsxtkIaPogNffLtuI48uRFAneT0XJqOo0lFO6JYFvdhY9QjMN99N1hU3NkX-D_95J_-cWreTYSDVWGjgV7AMJSUKqpqG9EtJPHSLpkcxtz_2-lQfrRp_I3yAfM0kGBTd2Lqawg0bm7muXhcUgqcyJSdy8RggxvXASbci24zwjC_Ihk" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/80 to-transparent">
+                    </div>
+                </div>
+                <!-- Content -->
+                <div class="relative z-10 h-full p-8 flex flex-col justify-end">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span
+                            class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold font-label tracking-widest uppercase border border-primary/20 backdrop-blur-md">Öne
+                            Çıkan</span>
+                        <div class="flex items-center gap-1 text-secondary text-sm font-medium">
+                            <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                            24 Ekim Perşembe
+                        </div>
+                    </div>
+                    <h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-3 tracking-tight">Pru's
+                        Thursday</h2>
+                    <p class="font-body text-on-surface-variant mb-8 max-w-xl">
+                        Mezunlarımızın bir araya geldiği, sektördeki son gelişmeleri değerlendirdiği ve yeni bağlantılar
+                        kurduğu geleneksel perşembe buluşmamız.
+                    </p>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+                        <div class="flex items-center gap-2 text-on-surface-variant text-sm">
+                            <span class="material-symbols-outlined text-secondary">location_on</span>
+                            <span>Kalamış Marina, İstanbul</span>
+                        </div>
+                        <button
+                            class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-3 rounded-full font-bold font-body flex items-center justify-center gap-2 hover:brightness-110 transition-all shadow-lg group-hover:shadow-[0_0_30px_rgba(237,193,79,0.4)]">
+                            Katılacağım
+                            <span
+                                class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+            <!-- Secondary Event Card 1 -->
+            <article
+                class="col-span-1 bg-surface-container-low rounded-2xl p-8 flex flex-col justify-between group sea-swell hover:-translate-y-1 hover:bg-surface-container-highest shadow-[0_8px_32px_rgba(0,0,0,0.2)]">
+                <div>
+                    <div
+                        class="w-14 h-14 rounded-full bg-surface-variant flex items-center justify-center mb-6 text-secondary border border-white/5 group-hover:scale-110 transition-transform duration-500">
+                        <span class="material-symbols-outlined text-3xl"
+                            style="font-variation-settings: 'FILL' 1;">mosque</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 text-secondary text-xs font-bold tracking-widest uppercase mb-3">
+                        <span class="material-symbols-outlined text-[16px]">schedule</span>
+                        15 Mart Cuma
+                    </div>
+                    <h3
+                        class="font-headline text-2xl font-bold text-on-surface mb-3 leading-tight group-hover:text-primary transition-colors">
+                        Geleneksel İftar Buluşması</h3>
+                    <p class="font-body text-sm text-on-surface-variant line-clamp-3">
+                        Ramazan ayının bereketini ve mezun dayanışmasını paylaşmak üzere geleneksel iftar soframızda
+                        buluşuyoruz.
+                    </p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-surface-variant/50 flex flex-col gap-4">
+                    <div class="flex items-center gap-2 text-on-surface-variant text-sm">
+                        <span class="material-symbols-outlined text-secondary text-[18px]">pin_drop</span>
+                        Piri Reis Üniversitesi Kampüsü
+                    </div>
+                    <button
+                        class="w-full bg-surface-variant/50 backdrop-blur-md text-secondary border border-secondary/30 px-6 py-2.5 rounded-full font-medium font-body hover:bg-secondary hover:text-on-secondary transition-colors flex justify-center items-center gap-2">
+                        Katılacağım
+                    </button>
+                </div>
+            </article>
+            <!-- Secondary Event Card 2 -->
+            <article
+                class="col-span-1 bg-surface-container-low rounded-2xl p-8 flex flex-col justify-between group sea-swell hover:-translate-y-1 hover:bg-surface-container-highest shadow-[0_8px_32px_rgba(0,0,0,0.2)]">
+                <div>
+                    <div
+                        class="w-14 h-14 rounded-full bg-surface-variant flex items-center justify-center mb-6 text-primary border border-white/5 group-hover:scale-110 transition-transform duration-500">
+                        <span class="material-symbols-outlined text-3xl"
+                            style="font-variation-settings: 'FILL' 1;">hub</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 text-secondary text-xs font-bold tracking-widest uppercase mb-3">
+                        <span class="material-symbols-outlined text-[16px]">schedule</span>
+                        05 Nisan Cuma
+                    </div>
+                    <h3
+                        class="font-headline text-2xl font-bold text-on-surface mb-3 leading-tight group-hover:text-primary transition-colors">
+                        Sektörel Networking Gecesi</h3>
+                    <p class="font-body text-sm text-on-surface-variant line-clamp-3">
+                        Denizcilik sektörünün önde gelen isimleriyle tanışma ve kariyer fırsatlarını değerlendirme
+                        şansı.
+                    </p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-surface-variant/50 flex flex-col gap-4">
+                    <div class="flex items-center gap-2 text-on-surface-variant text-sm">
+                        <span class="material-symbols-outlined text-secondary text-[18px]">pin_drop</span>
+                        Deniz Ticaret Odası
+                    </div>
+                    <button
+                        class="w-full bg-surface-variant/50 backdrop-blur-md text-secondary border border-secondary/30 px-6 py-2.5 rounded-full font-medium font-body hover:bg-secondary hover:text-on-secondary transition-colors flex justify-center items-center gap-2">
+                        Katılacağım
+                    </button>
+                </div>
+            </article>
+            <!-- Past Events Teaser (Spans 2 cols) -->
+            <article
+                class="md:col-span-2 bg-surface-container-low rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between border-l-4 border-surface-variant hover:border-primary transition-colors duration-300">
+                <div class="mb-6 md:mb-0 max-w-lg">
+                    <h3 class="font-headline text-2xl font-bold text-on-surface mb-2">Geçmiş Etkinlikler Arşivi</h3>
+                    <p class="font-body text-on-surface-variant text-sm">
+                        Kaçırdığınız etkinliklerin özetlerine, fotoğraf galerilerine ve sunum dosyalarına göz atın.
+                    </p>
+                </div>
+                <a class="flex items-center gap-3 text-primary font-bold font-body hover:text-secondary transition-colors group"
+                    href="#">
+                    Arşivi İncele
+                    <span
+                        class="material-symbols-outlined bg-surface-variant rounded-full p-2 group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                </a>
+            </article>
+        </div>
+    </main>
+    <!-- Footer Component -->
+    <footer class="w-full py-16 border-t border-white/5 bg-[#041329] dark:bg-[#041329] mt-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-8">
+            <!-- Brand Logo -->
+            <div class="text-lg font-bold text-[#edc14f] font-headline">
+                PRUMED
+            </div>
+            <!-- Links -->
+            <div class="flex flex-wrap justify-center gap-6">
+                <a class="text-slate-500 hover:text-[#edc14f] transition-colors opacity-80 hover:opacity-100 font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest"
+                    href="#">KVKK Aydınlatma Metni</a>
+                <a class="text-slate-500 hover:text-[#edc14f] transition-colors opacity-80 hover:opacity-100 font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest"
+                    href="#">Kullanım Koşulları</a>
+                <a class="text-slate-500 hover:text-[#edc14f] transition-colors opacity-80 hover:opacity-100 font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest"
+                    href="#">İletişim</a>
+            </div>
+            <!-- Copyright Text -->
+            <div
+                class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-slate-500 text-center md:text-right">
+                © 2024 Piri Reis Üniversitesi Mezunlar Derneği. Pruva Neta.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
